@@ -1,0 +1,192 @@
+/* Hide Streamlit default elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Hide Streamlit header anchor link icons */
+.stMarkdown a.st-anchor, 
+.stMarkdown h1 a, 
+.stMarkdown h2 a, 
+.stMarkdown h3 a, 
+.stMarkdown h4 a, 
+.stMarkdown h5 a, 
+.stMarkdown h6 a {
+    display: none !important;
+}
+
+/* Global Typography */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Custom Premium Navbar */
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid #9dbdba;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 15px -3px rgba(147, 174, 193, 0.2);
+}
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ec6a52, #f8b042);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.navbar-brand i {
+    -webkit-text-fill-color: #ec6a52;
+}
+.navbar-links {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;
+}
+.nav-link {
+    font-size: 0.95em;
+    color: #64748b;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.nav-link:hover {
+    color: #ec6a52;
+}
+.nav-link i {
+    font-size: 1.1em;
+}
+
+/* Custom Footer */
+.custom-footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #9dbdba;
+    color: #93aec1;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+}
+
+/* Adjust main container padding */
+.block-container {
+    padding-top: 6rem !important;
+    max-width: 95% !important;
+}
+
+/* Custom styles for a more premium look */
+.stButton>button {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
+}
+.stButton>button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+/* Primary Button Override */
+button[kind="primary"] {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: white !important;
+    border: none !important;
+    padding: 16px 32px !important;
+    font-size: 1.15em !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 15px -3px rgba(16, 185, 129, 0.3) !important;
+}
+button[kind="primary"]:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 20px -3px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* Input Fields Styling (Text, TextArea, Selectbox) */
+.stTextInput>div>div>input, .stTextArea>div>div>textarea, .stSelectbox>div>div>div {
+    border-radius: 8px !important;
+    border: 1px solid #9dbdba !important;
+    transition: all 0.2s ease !important;
+    background-color: #ffffff !important;
+}
+.stTextInput>div>div>input:focus, .stTextArea>div>div>textarea:focus, .stSelectbox>div>div>div:focus {
+    border-color: #93aec1 !important;
+    box-shadow: 0 0 0 3px rgba(147, 174, 193, 0.25) !important;
+}
+
+/* Streamlit Tabs Segmented Control */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: #f5f7f7;
+    padding: 6px;
+    border-radius: 12px;
+    width: max-content;
+    border: 1px solid #9dbdba;
+}
+.stTabs [data-baseweb="tab"] {
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    color: #93aec1;
+    padding: 10px 20px !important;
+    border: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease;
+}
+.stTabs [aria-selected="true"] {
+    background-color: white !important;
+    color: #ec6a52 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* Expander/Cards Styling */
+[data-testid="stExpander"] {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #9dbdba;
+    box-shadow: 0 4px 6px -1px rgba(147,174,193,0.1);
+    margin-bottom: 18px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+[data-testid="stExpander"]:hover {
+    box-shadow: 0 10px 15px -3px rgba(147,174,193,0.2);
+}
+[data-testid="stExpander"] details summary {
+    padding: 18px 24px !important;
+    font-weight: 600 !important;
+    color: #2d3748;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+}
+[data-testid="stExpander"] details[open] summary {
+    border-bottom: 1px solid #f5f7f7;
+}
+[data-testid="stExpander"] details summary:hover {
+    color: #ec6a52;
+}
+
+/* Live Preview Paper Effect targeted via the second layout column */
+[data-testid="column"]:nth-of-type(2) [data-testid="stHtml"] {
+    border-radius: 8px !important;
+    box-shadow: 0 0 25px 8px rgba(147, 174, 193, 0.6) !important;
+    border: 2px solid #9dbdba !important;
+    background: white !important;
+    overflow: hidden !important;
+    margin-top: 20px !important;
+}
