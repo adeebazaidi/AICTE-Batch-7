@@ -1,4 +1,4 @@
-# AI Resume & Portfolio Builder (v2.0)
+# AI Resume Builder (v2.0)
 
 A highly polished, premium SaaS-style web application that helps users dynamically build, preview, and export professional resumes and AI-generated cover letters. Powered by Streamlit, Google Gemini AI, and WeasyPrint.
 
